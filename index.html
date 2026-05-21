@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GPS Logger – 広告なしの移動経路ロガー</title>
+<meta name="description" content="広告なし・プライバシー重視のシンプルなGPSロガー。ワンタップで移動経路を記録し、地図で軌跡を確認。GPX/CSV/KMLエクスポート、iCloud同期、Apple Watch対応。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ナビ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html"><span class="logo">📍</span>GPS Logger</a>
+    <div class="nav-links">
+      <a href="index.html" class="active" data-ja="ホーム" data-en="Home">ホーム</a>
+      <a href="support.html" data-ja="サポート" data-en="Support">サポート</a>
+      <a href="privacy-policy.html" data-ja="プライバシー" data-en="Privacy">プライバシー</a>
+      <button class="lang-btn active" id="b-ja" onclick="setLang('ja')">日本語</button>
+      <button class="lang-btn" id="b-en" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ヒーロー -->
+<header class="hero">
+  <div class="app-icon">📍</div>
+  <h1>GPS Logger</h1>
+  <p class="tagline"
+     data-ja="あなたの移動を、シンプルに記録。"
+     data-en="Record your journeys, simply.">あなたの移動を、シンプルに記録。</p>
+  <p class="sub"
+     data-ja="徒歩・ランニング・自転車・ドライブ・旅行の経路をGPSで自動記録。"
+     data-en="Auto-record walking, running, cycling, driving & travel routes by GPS.">
+     徒歩・ランニング・自転車・ドライブ・旅行の経路をGPSで自動記録。</p>
+  <div class="badges">
+    <span class="badge green" data-ja="✓ 広告なし" data-en="✓ No Ads">✓ 広告なし</span>
+    <span class="badge green" data-ja="✓ プライバシー重視" data-en="✓ Privacy-first">✓ プライバシー重視</span>
+    <span class="badge" data-ja="7言語対応" data-en="7 Languages">7言語対応</span>
+  </div>
+</header>
+
+<!-- 機能 -->
+<section class="section wrap">
+  <h2 class="sec-title" data-ja="主な機能" data-en="Features">主な機能</h2>
+  <p class="sec-lead"
+     data-ja="シンプルなのに本格的。日常から本格記録まで。"
+     data-en="Simple yet powerful — from daily walks to serious tracking.">
+     シンプルなのに本格的。日常から本格記録まで。</p>
+  <div class="features">
+    <div class="feature"><div class="ico">⏺</div>
+      <h3 data-ja="ワンタップ記録" data-en="One-Tap Recording">ワンタップ記録</h3>
+      <p data-ja="大きなボタンを押すだけで記録開始。直感的に使えます。"
+         data-en="Just press the big button to start. Simple and intuitive.">大きなボタンを押すだけで記録開始。直感的に使えます。</p></div>
+    <div class="feature"><div class="ico">🌙</div>
+      <h3 data-ja="バックグラウンド記録" data-en="Background Recording">バックグラウンド記録</h3>
+      <p data-ja="画面オフでも記録を継続。低電力モードで電池も節約。"
+         data-en="Keeps recording with the screen off. Power-saving mode included.">画面オフでも記録を継続。低電力モードで電池も節約。</p></div>
+    <div class="feature"><div class="ico">🗺️</div>
+      <h3 data-ja="地図で軌跡表示" data-en="Map Visualization">地図で軌跡表示</h3>
+      <p data-ja="標準・衛星・ハイブリッドの3スタイルで軌跡を美しく描画。"
+         data-en="Beautifully draws routes in Standard, Satellite & Hybrid styles.">標準・衛星・ハイブリッドの3スタイルで軌跡を美しく描画。</p></div>
+    <div class="feature"><div class="ico">📊</div>
+      <h3 data-ja="詳しい統計" data-en="Statistics">詳しい統計</h3>
+      <p data-ja="距離・時間・速度・標高をグラフ表示。週/月/年で集計。"
+         data-en="Distance, time, speed & elevation charts. Weekly/monthly/yearly.">距離・時間・速度・標高をグラフ表示。週/月/年で集計。</p></div>
+    <div class="feature"><div class="ico">📤</div>
+      <h3 data-ja="GPX/CSV/KML出力" data-en="GPX/CSV/KML Export">GPX/CSV/KML出力</h3>
+      <p data-ja="Strava・Garmin・Google Earth など他サービスと連携。"
+         data-en="Works with Strava, Garmin Connect, Google Earth & more.">Strava・Garmin・Google Earth など他サービスと連携。</p></div>
+    <div class="feature"><div class="ico">☁️</div>
+      <h3 data-ja="iCloud同期" data-en="iCloud Sync">iCloud同期</h3>
+      <p data-ja="複数端末でデータを自動同期。機種変更も安心。"
+         data-en="Auto-sync across devices. Switching phones is worry-free.">複数端末でデータを自動同期。機種変更も安心。</p></div>
+    <div class="feature"><div class="ico">⌚</div>
+      <h3 data-ja="Apple Watch対応" data-en="Apple Watch">Apple Watch対応</h3>
+      <p data-ja="Watchから記録の開始・停止。距離や時間をその場で確認。"
+         data-en="Start/stop from your wrist and check stats on the go.">Watchから記録の開始・停止。距離や時間をその場で確認。</p></div>
+    <div class="feature"><div class="ico">🏷️</div>
+      <h3 data-ja="カテゴリ管理" data-en="Categories">カテゴリ管理</h3>
+      <p data-ja="徒歩・ラン・自転車などで自動分類。色やアイコンも自由。"
+         data-en="Auto-organize by activity. Customize colors & icons.">徒歩・ラン・自転車などで自動分類。色やアイコンも自由。</p></div>
+  </div>
+</section>
+
+<!-- 言語 -->
+<section class="section wrap" style="text-align:center;">
+  <h2 class="sec-title" data-ja="世界中で使える" data-en="Works Worldwide">世界中で使える</h2>
+  <p class="sec-lead"
+     data-ja="iPhoneの言語設定に自動で追従します。"
+     data-en="Automatically follows your iPhone's language setting.">iPhoneの言語設定に自動で追従します。</p>
+  <div class="langs">
+    <span class="lang-chip">日本語</span>
+    <span class="lang-chip">English</span>
+    <span class="lang-chip">简体中文</span>
+    <span class="lang-chip">한국어</span>
+    <span class="lang-chip">Français</span>
+    <span class="lang-chip">Español</span>
+    <span class="lang-chip">Deutsch</span>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="wrap">
+  <div class="cta">
+    <h2 class="sec-title" data-ja="まもなく App Store に登場" data-en="Coming soon to the App Store">まもなく App Store に登場</h2>
+    <p class="sec-lead" style="margin-bottom:0;"
+       data-ja="広告なし・プライバシー重視のGPSロガー。"
+       data-en="An ad-free, privacy-first GPS logger.">広告なし・プライバシー重視のGPSロガー。</p>
+    <span class="note-soon" data-ja="※ 配信開始までお待ちください" data-en="* Stay tuned for the release">※ 配信開始までお待ちください</span>
+  </div>
+</div>
+
+<!-- フッター -->
+<footer>
+  <div class="flinks">
+    <a href="index.html" data-ja="ホーム" data-en="Home">ホーム</a>
+    <a href="support.html" data-ja="サポート" data-en="Support">サポート</a>
+    <a href="privacy-policy.html" data-ja="プライバシーポリシー" data-en="Privacy Policy">プライバシーポリシー</a>
+  </div>
+  <p>&copy; 2026 GPS Logger. Developed by Tsuyoshi.</p>
+</footer>
+
+<script src="lang.js"></script>
+</body>
+</html>
