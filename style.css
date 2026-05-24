@@ -130,6 +130,10 @@ footer .flinks a:hover{color:var(--brand);}
 
 .hidden{display:none !important;}
 
+/* 実アプリアイコン画像（絵文字から差し替え） */
+.hero img.app-icon{ object-fit:cover; display:block; margin:0 auto 20px; }
+.brand img.logo{ object-fit:cover; display:block; }
+
 @media (max-width:600px){
   .hero h1{font-size:1.8rem;}
   .nav-links a{padding:5px 9px; font-size:.82rem;}
